@@ -180,13 +180,13 @@ adomikAdapter.buildTypedEvents = function () {
   return groupedTypedEvents;
 }
 
-// Initialize adomik object
-adomikAdapter.currentContext = {};
-adomikAdapter.bucketEvents = [];
-
 adomikAdapter.adapterEnableAnalytics = adomikAdapter.enableAnalytics;
 
 adomikAdapter.enableAnalytics = function (config) {
+  // Initialize adomik object
+  adomikAdapter.currentContext = {};
+  adomikAdapter.bucketEvents = [];
+
   const initOptions = config.options;
   if (initOptions) {
     adomikAdapter.currentContext = {
